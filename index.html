@@ -209,7 +209,7 @@ table.tests tr:last-child td{border-bottom:none}
     <input type="text" id="t-title" placeholder="e.g. Unit 2 quiz">
     <label>Date</label>
     <input type="date" id="t-date">
-    <label>Individual or Group?</label>
+    <label>Individual or Group</label>
     <select id="t-group" onchange="toggleMembers()"><option value="individual">Individual</option><option value="group">Group</option></select>
     <div id="members-wrap" style="display:none">
       <label>Group members (comma separated)</label>
@@ -522,7 +522,7 @@ function renderPanel(id){
       <div class="section-label" style="margin:0">Tests & projects</div>
       <button class="add-btn" onclick="openTest('${id}')">+ Add</button>
     </div>
-    ${d.tests.length?`<table class="tests"><thead><tr><th>Type</th><th>Title</th><th>Date</th><th>Group?</th><th>Marks</th><th></th></tr></thead><tbody>${tRows}</tbody></table>`:`<div class="empty-tests">No tests or projects added yet.</div>`}`;
+    ${d.tests.length?`<table class="tests"><thead><tr><th>Type</th><th>Title</th><th>Date</th><th>Group</th><th>Marks</th><th></th></tr></thead><tbody>${tRows}</tbody></table>`:`<div class="empty-tests">No tests or projects added yet.</div>`}`;
 }
 function cellH(c,sid){
   return `<div class="${c.status?'cls-cell '+c.status:'cls-cell'}" onclick="openCls('${sid}',${c.n-1})"><div class="cls-num">${c.n}</div><div class="cls-dot"></div><div class="cls-date">${c.date?fmtD(c.date):''}</div></div>`;
