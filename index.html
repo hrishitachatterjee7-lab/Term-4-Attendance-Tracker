@@ -163,7 +163,7 @@ table.tests tr:hover td{background:#fafafa}
     <input type="text" id="t-title" placeholder="e.g. Unit 2 quiz">
     <label>Date</label>
     <input type="date" id="t-date">
-    <label>Individual or Group?</label>
+    <label>Individual or Group</label>
     <select id="t-group" onchange="toggleMembers()">
       <option value="individual">Individual</option>
       <option value="group">Group</option>
@@ -433,7 +433,7 @@ function renderPanel(id){
         <div class="section-label" style="margin:0">Class tests & projects</div>
         <button class="add-btn" onclick="openTest('${id}')">+ Add test / project</button>
       </div>
-      ${d.tests.length?`<table class="tests"><thead><tr><th>Type</th><th>Title</th><th>Date</th><th>Group?</th><th>Marks</th><th></th></tr></thead><tbody>${testsRows}</tbody></table>`:`<div class="empty-tests">No tests or projects added yet.</div>`}
+      ${d.tests.length?`<table class="tests"><thead><tr><th>Type</th><th>Title</th><th>Date</th><th>Group</th><th>Marks</th><th></th></tr></thead><tbody>${testsRows}</tbody></table>`:`<div class="empty-tests">No tests or projects added yet.</div>`}
     </div>
   `;
 }
